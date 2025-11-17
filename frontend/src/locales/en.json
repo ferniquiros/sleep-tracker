@@ -1,0 +1,87 @@
+{
+  "app_title": "SleepTracker",
+  "login": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "button": "Sign In",
+    "no_account": "Don't have an account?",
+    "register_link": "Register here",
+    "error": "Login error"
+  },
+  "register": {
+    "title": "Create Account",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "button": "Register",
+    "has_account": "Already have an account?",
+    "login_link": "Login here",
+    "error": "Registration error"
+  },
+  "dashboard": {
+    "title": "My Sleep Dashboard",
+    "welcome": "Welcome",
+    "add_record": "Add Sleep Record",
+    "my_records": "My Records",
+    "no_records": "No records yet. Add your first sleep record!",
+    "logout": "Logout",
+    "stats": {
+      "average": "Average hours",
+      "total_records": "Total records",
+      "best_sleep": "Best sleep"
+    }
+  },
+  "sleep_form": {
+    "title": "Add Sleep Record",
+    "edit_title": "Edit Record",
+    "date": "Date",
+    "sleep_time": "Bedtime",
+    "wake_time": "Wake time",
+    "quality": "Sleep quality",
+    "quality_options": {
+      "excellent": "Excellent",
+      "good": "Good",
+      "fair": "Fair",
+      "poor": "Poor"
+    },
+    "notes": "Notes (optional)",
+    "save": "Save",
+    "cancel": "Cancel",
+    "success": "Record saved successfully",
+    "error": "Error saving record"
+  },
+  "sleep_list": {
+    "hours": "hours",
+    "quality": "Quality",
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirm_delete": "Are you sure you want to delete this record?",
+    "deleted": "Record deleted"
+  },
+  "weather": {
+    "title": "Current Weather",
+    "search": "Search city",
+    "button": "Check",
+    "temperature": "Temperature",
+    "feels_like": "Feels like",
+    "humidity": "Humidity",
+    "description": "Description",
+    "error": "Error fetching weather",
+    "placeholder": "Ex: Santiago, London, New York"
+  },
+  "recommendations": {
+    "title": "Recommendations",
+    "good": "Excellent! You're sleeping well (7-9 hours). Keep this routine.",
+    "low": "You're sleeping too little (less than 7 hours). Try going to bed earlier.",
+    "high": "You're sleeping too much (more than 9 hours). It may be a sign of accumulated fatigue.",
+    "tips_title": "Tips to improve your sleep:",
+    "tips": [
+      "Keep a regular sleep schedule",
+      "Avoid screens 1 hour before bed",
+      "Keep your room cool and dark",
+      "Avoid caffeine after 2 PM",
+      "Exercise regularly, but not before bedtime"
+    ]
+  }
+}

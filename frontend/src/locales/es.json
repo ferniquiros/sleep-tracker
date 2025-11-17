@@ -1,0 +1,87 @@
+{
+  "app_title": "SleepTracker",
+  "login": {
+    "title": "Iniciar Sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "button": "Entrar",
+    "no_account": "¿No tienes cuenta?",
+    "register_link": "Regístrate aquí",
+    "error": "Error al iniciar sesión"
+  },
+  "register": {
+    "title": "Crear Cuenta",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "button": "Registrarse",
+    "has_account": "¿Ya tienes cuenta?",
+    "login_link": "Inicia sesión aquí",
+    "error": "Error al registrar"
+  },
+  "dashboard": {
+    "title": "Mi Panel de Sueño",
+    "welcome": "Bienvenido/a",
+    "add_record": "Registrar Sueño",
+    "my_records": "Mis Registros",
+    "no_records": "No tienes registros aún. ¡Agrega tu primer registro de sueño!",
+    "logout": "Cerrar Sesión",
+    "stats": {
+      "average": "Promedio de horas",
+      "total_records": "Registros totales",
+      "best_sleep": "Mejor sueño"
+    }
+  },
+  "sleep_form": {
+    "title": "Registrar Sueño",
+    "edit_title": "Editar Registro",
+    "date": "Fecha",
+    "sleep_time": "Hora de dormir",
+    "wake_time": "Hora de despertar",
+    "quality": "Calidad del sueño",
+    "quality_options": {
+      "excellent": "Excelente",
+      "good": "Bueno",
+      "fair": "Regular",
+      "poor": "Malo"
+    },
+    "notes": "Notas (opcional)",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "success": "Registro guardado exitosamente",
+    "error": "Error al guardar registro"
+  },
+  "sleep_list": {
+    "hours": "horas",
+    "quality": "Calidad",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "confirm_delete": "¿Estás seguro de eliminar este registro?",
+    "deleted": "Registro eliminado"
+  },
+  "weather": {
+    "title": "Clima Actual",
+    "search": "Buscar ciudad",
+    "button": "Consultar",
+    "temperature": "Temperatura",
+    "feels_like": "Sensación térmica",
+    "humidity": "Humedad",
+    "description": "Descripción",
+    "error": "Error al obtener clima",
+    "placeholder": "Ej: Santiago, London, New York"
+  },
+  "recommendations": {
+    "title": "Recomendaciones",
+    "good": "¡Excelente! Estás durmiendo bien (7-9 horas). Mantén esta rutina.",
+    "low": "Estás durmiendo poco (menos de 7 horas). Intenta acostarte más temprano.",
+    "high": "Estás durmiendo mucho (más de 9 horas). Puede ser señal de cansancio acumulado.",
+    "tips_title": "Consejos para mejorar tu sueño:",
+    "tips": [
+      "Mantén un horario regular de sueño",
+      "Evita pantallas 1 hora antes de dormir",
+      "Mantén tu habitación fresca y oscura",
+      "Evita cafeína después de las 2 PM",
+      "Haz ejercicio regularmente, pero no antes de dormir"
+    ]
+  }
+}
