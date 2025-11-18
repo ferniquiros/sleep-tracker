@@ -60,15 +60,21 @@
     "deleted": "Registro eliminado"
   },
   "weather": {
-    "title": "Clima Actual",
-    "search": "Buscar ciudad",
+    "title": "Luz Natural y Ritmo Circadiano",
     "button": "Consultar",
-    "temperature": "Temperatura",
-    "feels_like": "Sensación térmica",
-    "humidity": "Humedad",
-    "description": "Descripción",
-    "error": "Error al obtener clima",
-    "placeholder": "Ej: Santiago, London, New York"
+    "placeholder": "Ej: Santiago, London, New York, Tokyo",
+    "error": "Error al obtener datos",
+    "city_not_found": "Ciudad no encontrada. Intenta: Santiago, New York, London, Tokyo, Paris, Sydney, Madrid, Berlin, Rome, Mexico, Buenos Aires, Lima",
+    "sunrise": "Amanecer",
+    "sunset": "Atardecer",
+    "day_length": "Duración del día",
+    "hours": "horas",
+    "info": "La exposición a luz natural regula tu ritmo circadiano, mejorando la calidad del sueño y tu energía durante el día.",
+    "rec_early_sunrise": "El amanecer es temprano. Aprovecha la luz natural para despertar naturalmente y regular tu ritmo circadiano.",
+    "rec_late_sunrise": "Amanecer tardío. Considera usar una lámpara de luz natural al despertar para activar tu cuerpo.",
+    "rec_sunset": "El atardecer es a las {time}. Reduce luces brillantes 2-3 horas antes de dormir para preparar tu cuerpo.",
+    "rec_short_day": "Día corto (invierno). Aumenta tu exposición a luz natural durante el día para mantener tu energía.",
+    "rec_long_day": "Día largo (verano). Usa cortinas opacas para dormir mejor. La luz temprana puede despertar tu cuerpo antes de tiempo."
   },
   "recommendations": {
     "title": "Recomendaciones",

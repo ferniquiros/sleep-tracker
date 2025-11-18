@@ -60,15 +60,21 @@
     "deleted": "Record deleted"
   },
   "weather": {
-    "title": "Current Weather",
-    "search": "Search city",
+    "title": "Natural Light & Circadian Rhythm",
     "button": "Check",
-    "temperature": "Temperature",
-    "feels_like": "Feels like",
-    "humidity": "Humidity",
-    "description": "Description",
-    "error": "Error fetching weather",
-    "placeholder": "Ex: Santiago, London, New York"
+    "placeholder": "Ex: Santiago, London, New York, Tokyo",
+    "error": "Error fetching data",
+    "city_not_found": "City not found. Try: Santiago, New York, London, Tokyo, Paris, Sydney, Madrid, Berlin, Rome, Mexico, Buenos Aires, Lima",
+    "sunrise": "Sunrise",
+    "sunset": "Sunset",
+    "day_length": "Day length",
+    "hours": "hours",
+    "info": "Natural light exposure regulates your circadian rhythm, improving sleep quality and daytime energy.",
+    "rec_early_sunrise": "Early sunrise. Take advantage of natural light to wake up naturally and regulate your circadian rhythm.",
+    "rec_late_sunrise": "Late sunrise. Consider using a natural light lamp when waking up to activate your body.",
+    "rec_sunset": "Sunset is at {time}. Reduce bright lights 2-3 hours before bed to prepare your body.",
+    "rec_short_day": "Short day (winter). Increase your natural light exposure during the day to maintain energy.",
+    "rec_long_day": "Long day (summer). Use blackout curtains for better sleep. Early light may wake your body prematurely."
   },
   "recommendations": {
     "title": "Recommendations",
