@@ -65,9 +65,40 @@ function Dashboard({ translations, user, setUser, language, setLanguage }) {
     ? (records.reduce((sum, r) => sum + r.hours, 0) / records.length).toFixed(1)
     : 0;
 
-  const bestSleep = records.length > 0
-    ? Math.max(...records.map(r => r.hours)).toFixed(1)
-    : 0;
+  // Mejor sueño: priorizar calidad excellent/good con horas razonables (6-10h)
+  const getBestSleep = () => {
+    if (records.length === 0) return 0;
+    
+    // Prioridad 1: Calidad excellent con 6-10 horas
+    const excellentSleep = records.filter(r => 
+      r.quality === 'excellent' && r.hours >= 6 && r.hours <= 10
+    );
+    if (excellentSleep.length > 0) {
+      return Math.max(...excellentSleep.map(r => r.hours)).toFixed(1);
+    }
+    
+    // Prioridad 2: Calidad good con 6-10 horas
+    const goodSleep = records.filter(r => 
+      r.quality === 'good' && r.hours >= 6 && r.hours <= 10
+    );
+    if (goodSleep.length > 0) {
+      return Math.max(...goodSleep.map(r => r.hours)).toFixed(1);
+    }
+    
+    // Prioridad 3: Cualquier registro con 7-9 horas (rango óptimo)
+    const optimalSleep = records.filter(r => r.hours >= 7 && r.hours <= 9);
+    if (optimalSleep.length > 0) {
+      return Math.max(...optimalSleep.map(r => r.hours)).toFixed(1);
+    }
+    
+    // Si no hay ninguno bueno, mostrar el más cercano a 8 horas
+    const closest = records.reduce((prev, curr) => 
+      Math.abs(curr.hours - 8) < Math.abs(prev.hours - 8) ? curr : prev
+    );
+    return closest.hours.toFixed(1);
+  };
+
+  const bestSleep = getBestSleep();
 
   // Recomendaciones
   const getRecommendation = () => {
