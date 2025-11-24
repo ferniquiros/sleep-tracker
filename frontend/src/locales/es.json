@@ -62,7 +62,7 @@
   "weather": {
     "title": "Luz Natural y Ritmo Circadiano",
     "button": "Consultar",
-    "placeholder": "Ej: Santiago, London, New York, Tokyo",
+    "placeholder": "Busca cualquier ciudad del mundo...",
     "error": "Error al obtener datos",
     "city_not_found": "Ciudad no encontrada. Intenta: Santiago, New York, London, Tokyo, Paris, Sydney, Madrid, Berlin, Rome, Mexico, Buenos Aires, Lima",
     "sunrise": "Amanecer",
@@ -88,6 +88,19 @@
       "Mantén tu habitación fresca y oscura",
       "Evita cafeína después de las 2 PM",
       "Haz ejercicio regularmente, pero no antes de dormir"
-    ]
+    ],
+    "personal_title": "Análisis de esta noche",
+    "personal_low": "Dormiste solo {hours} horas. Tu cuerpo necesita más descanso. Intenta acostarte 1-2 horas más temprano esta noche.",
+    "personal_moderate": "{hours} horas es apenas suficiente. Considera agregar 30-60 minutos más de sueño para optimizar tu energía.",
+    "personal_good": "¡Excelente! {hours} horas es la cantidad ideal. Mantén este horario para maximizar tu rendimiento.",
+    "personal_high": "Dormiste {hours} horas. Puede indicar cansancio acumulado o necesidad de recuperación. Observa cómo te sientes durante el día.",
+    "quality_poor": "Calidad pobre del sueño. Revisa: temperatura de tu habitación (18-22°C), ruido ambiental, luz y comodidad del colchón.",
+    "quality_fair": "Calidad regular. Considera: reducir pantallas antes de dormir, evitar cafeína después de las 14:00, y establecer una rutina relajante.",
+    "quality_excellent": "¡Sueño de excelente calidad! Trata de identificar qué hiciste diferente y repite estos hábitos.",
+    "time_optimal": "Horario óptimo para dormir ({time}). Este es un buen rango para la mayoría de las personas. Mantén esta consistencia.",
+    "time_early": "Te acostaste temprano ({time}). Esto puede funcionar si te despiertas temprano. Mantén consistencia con tu hora de despertar.",
+    "time_late": "Te dormiste pasada la medianoche ({time}). Intenta adelantar tu hora de sueño gradualmente en intervalos de 15-30 minutos.",
+    "time_very_late": "Horario muy tardío ({time}). Dormir en la madrugada desregula tu ritmo circadiano. Busca ayuda si esto es frecuente.",
+    "time_unusual": "Horario inusual ({time}). Si trabajas de noche, usa cortinas opacas. Si no, intenta regularizar tu horario de sueño."
   }
 }

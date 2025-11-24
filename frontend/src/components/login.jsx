@@ -79,73 +79,89 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     minHeight: '100vh',
-    backgroundColor: '#f0f2f5',
+    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     padding: '20px'
   },
   card: {
     backgroundColor: 'white',
-    padding: '40px',
-    borderRadius: '10px',
-    boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+    padding: '45px',
+    borderRadius: '20px',
+    boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
     width: '100%',
-    maxWidth: '400px'
+    maxWidth: '420px',
+    animation: 'fadeInUp 0.6s ease'
   },
   title: {
     textAlign: 'center',
-    color: '#333',
-    marginBottom: '30px'
+    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    marginBottom: '35px',
+    fontSize: '32px',
+    fontWeight: '800'
   },
   form: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '20px'
+    gap: '25px'
   },
   inputGroup: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '8px'
+    gap: '10px'
   },
   label: {
     color: '#555',
     fontSize: '14px',
-    fontWeight: '500'
+    fontWeight: '600',
+    textTransform: 'uppercase',
+    letterSpacing: '0.5px'
   },
   input: {
-    padding: '12px',
-    border: '1px solid #ddd',
-    borderRadius: '6px',
-    fontSize: '14px',
-    transition: 'border-color 0.3s'
+    padding: '14px 16px',
+    border: '2px solid #e0e0e0',
+    borderRadius: '10px',
+    fontSize: '15px',
+    transition: 'all 0.3s ease',
+    outline: 'none'
   },
   button: {
-    padding: '12px',
-    backgroundColor: '#4A90E2',
+    padding: '16px',
+    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     color: 'white',
     border: 'none',
-    borderRadius: '6px',
+    borderRadius: '10px',
     fontSize: '16px',
-    fontWeight: '600',
+    fontWeight: '700',
     cursor: 'pointer',
-    marginTop: '10px'
+    marginTop: '10px',
+    boxShadow: '0 6px 20px rgba(102,126,234,0.4)',
+    transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+    textTransform: 'uppercase',
+    letterSpacing: '1px'
   },
   error: {
-    backgroundColor: '#fee',
-    color: '#c33',
-    padding: '12px',
-    borderRadius: '6px',
+    background: 'linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%)',
+    color: 'white',
+    padding: '14px',
+    borderRadius: '10px',
     marginBottom: '20px',
-    textAlign: 'center'
+    textAlign: 'center',
+    fontWeight: '600',
+    boxShadow: '0 4px 15px rgba(255,107,107,0.3)'
   },
   link: {
     textAlign: 'center',
-    marginTop: '20px',
+    marginTop: '25px',
     color: '#666',
     fontSize: '14px'
   },
   linkAnchor: {
-    color: '#4A90E2',
+    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
     textDecoration: 'none',
-    fontWeight: '600'
+    fontWeight: '700'
   }
 };
 

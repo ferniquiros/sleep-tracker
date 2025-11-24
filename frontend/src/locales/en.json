@@ -62,7 +62,7 @@
   "weather": {
     "title": "Natural Light & Circadian Rhythm",
     "button": "Check",
-    "placeholder": "Ex: Santiago, London, New York, Tokyo",
+    "placeholder": "Search any city in the world...",
     "error": "Error fetching data",
     "city_not_found": "City not found. Try: Santiago, New York, London, Tokyo, Paris, Sydney, Madrid, Berlin, Rome, Mexico, Buenos Aires, Lima",
     "sunrise": "Sunrise",
@@ -88,6 +88,19 @@
       "Keep your room cool and dark",
       "Avoid caffeine after 2 PM",
       "Exercise regularly, but not before bedtime"
-    ]
+    ],
+    "personal_title": "Analysis of this night",
+    "personal_low": "You only slept {hours} hours. Your body needs more rest. Try going to bed 1-2 hours earlier tonight.",
+    "personal_moderate": "{hours} hours is barely enough. Consider adding 30-60 more minutes of sleep to optimize your energy.",
+    "personal_good": "Excellent! {hours} hours is the ideal amount. Maintain this schedule to maximize your performance.",
+    "personal_high": "You slept {hours} hours. This may indicate accumulated fatigue or recovery needs. Observe how you feel during the day.",
+    "quality_poor": "Poor sleep quality. Check: room temperature (18-22°C), ambient noise, light, and mattress comfort.",
+    "quality_fair": "Fair quality. Consider: reducing screens before bed, avoiding caffeine after 2 PM, and establishing a relaxing routine.",
+    "quality_excellent": "Excellent sleep quality! Try to identify what you did differently and repeat these habits.",
+    "time_optimal": "Optimal bedtime ({time}). This is a good range for most people. Maintain this consistency.",
+    "time_early": "You went to bed early ({time}). This can work if you wake up early too. Keep consistency with your wake time.",
+    "time_late": "You fell asleep past midnight ({time}). Try to advance your bedtime gradually in 15-30 minute intervals.",
+    "time_very_late": "Very late schedule ({time}). Sleeping at dawn disrupts your circadian rhythm. Seek help if this is frequent.",
+    "time_unusual": "Unusual schedule ({time}). If you work nights, use blackout curtains. If not, try to regularize your sleep schedule."
   }
 }

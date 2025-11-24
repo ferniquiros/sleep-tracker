@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import SleepForm from './SleepForm';
-import SleepList from './SleepList';
-import Weather from './Weather';
+import SleepForm from './sleepform';
+import SleepList from './sleeplist';
+import Weather from './weather';
 
 function Dashboard({ translations, user, setUser, language, setLanguage }) {
   const [records, setRecords] = useState([]);
@@ -86,15 +86,17 @@ function Dashboard({ translations, user, setUser, language, setLanguage }) {
       <nav style={styles.navbar}>
         <h1 style={styles.logo}>{translations.app_title}</h1>
         <div style={styles.navRight}>
-          <select 
-            value={language} 
-            onChange={(e) => setLanguage(e.target.value)}
-            style={styles.langSelector}
-          >
-            <option value="es">🇪🇸 Español</option>
-            <option value="en">🇬🇧 English</option>
-          </select>
-          <span style={styles.userName}>{user?.name}</span>
+          <div style={styles.navControls}>
+            <select 
+              value={language} 
+              onChange={(e) => setLanguage(e.target.value)}
+              style={styles.langSelector}
+            >
+              <option value="es">🇪🇸 ES</option>
+              <option value="en">🇬🇧 EN</option>
+            </select>
+            <span style={styles.userName}>{user?.name}</span>
+          </div>
           <button onClick={handleLogout} style={styles.logoutBtn}>
             {translations.dashboard.logout}
           </button>
@@ -103,7 +105,7 @@ function Dashboard({ translations, user, setUser, language, setLanguage }) {
 
       <div style={styles.content}>
         {/* Estadísticas */}
-        <div style={styles.statsContainer}>
+        <div style={styles.statsContainer} className="stats-container">
           <div style={styles.statCard}>
             <h3 style={styles.statValue}>{avgHours}</h3>
             <p style={styles.statLabel}>{translations.dashboard.stats.average}</p>
@@ -179,41 +181,57 @@ const styles = {
     backgroundColor: '#f0f2f5'
   },
   navbar: {
-    backgroundColor: '#4A90E2',
+    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     color: 'white',
-    padding: '15px 30px',
+    padding: '20px 30px',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+    boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
+    flexWrap: 'wrap',
+    gap: '15px'
   },
   logo: {
     margin: 0,
-    fontSize: '24px'
+    fontSize: '24px',
+    whiteSpace: 'nowrap'
   },
   navRight: {
     display: 'flex',
     alignItems: 'center',
-    gap: '15px'
+    gap: '15px',
+    flexWrap: 'wrap'
+  },
+  navControls: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '12px',
+    flexWrap: 'wrap'
   },
   langSelector: {
     padding: '8px 12px',
     borderRadius: '6px',
     border: 'none',
     fontSize: '14px',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    fontWeight: '600',
+    minWidth: '80px'
   },
   userName: {
-    fontSize: '16px'
+    fontSize: '15px',
+    fontWeight: '500'
   },
   logoutBtn: {
     padding: '8px 16px',
     backgroundColor: 'white',
-    color: '#4A90E2',
+    color: '#667eea',
     border: 'none',
     borderRadius: '6px',
     cursor: 'pointer',
-    fontWeight: '600'
+    fontWeight: '600',
+    fontSize: '14px',
+    whiteSpace: 'nowrap',
+    boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
   },
   content: {
     maxWidth: '1200px',
@@ -227,28 +245,37 @@ const styles = {
     marginBottom: '30px'
   },
   statCard: {
-    backgroundColor: 'white',
-    padding: '25px',
-    borderRadius: '10px',
+    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    padding: '30px',
+    borderRadius: '15px',
     textAlign: 'center',
-    boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+    boxShadow: '0 8px 20px rgba(102,126,234,0.3)',
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+    cursor: 'pointer',
+    color: 'white'
   },
   statValue: {
-    fontSize: '36px',
-    color: '#4A90E2',
-    margin: '0 0 10px 0'
+    fontSize: '42px',
+    color: 'white',
+    margin: '0 0 10px 0',
+    fontWeight: '800',
+    textShadow: '0 2px 4px rgba(0,0,0,0.2)'
   },
   statLabel: {
     fontSize: '14px',
-    color: '#666',
-    margin: 0
+    color: 'rgba(255,255,255,0.9)',
+    margin: 0,
+    fontWeight: '600',
+    textTransform: 'uppercase',
+    letterSpacing: '0.5px'
   },
   recommendationCard: {
-    backgroundColor: '#E8F4FD',
-    padding: '25px',
-    borderRadius: '10px',
+    background: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
+    padding: '30px',
+    borderRadius: '15px',
     marginBottom: '30px',
-    border: '2px solid #4A90E2'
+    border: 'none',
+    boxShadow: '0 8px 20px rgba(0,0,0,0.1)'
   },
   recommendationTitle: {
     color: '#2E5C8A',
@@ -275,15 +302,17 @@ const styles = {
   },
   addButton: {
     width: '100%',
-    padding: '15px',
-    backgroundColor: '#4A90E2',
+    padding: '18px',
+    background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
     color: 'white',
     border: 'none',
-    borderRadius: '10px',
+    borderRadius: '12px',
     fontSize: '18px',
-    fontWeight: '600',
+    fontWeight: '700',
     cursor: 'pointer',
-    marginBottom: '30px'
+    marginBottom: '30px',
+    boxShadow: '0 6px 20px rgba(245,87,108,0.4)',
+    transition: 'transform 0.2s ease, box-shadow 0.2s ease'
   },
   recordsSection: {
     backgroundColor: 'white',
@@ -302,5 +331,67 @@ const styles = {
     padding: '40px'
   }
 };
+
+// Agregar estilos responsive para móvil
+const mediaStyleSheet = document.createElement('style');
+mediaStyleSheet.textContent = `
+  @media (max-width: 767px) {
+    /* Ajustar navbar en móvil */
+    nav {
+      padding: 15px 20px !important;
+    }
+    
+    nav h1 {
+      font-size: 20px !important;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px !important;
+    }
+    
+    /* Centrar controles en móvil */
+    nav > div:last-child {
+      width: 100%;
+      justify-content: center !important;
+    }
+    
+    /* Hacer el botón de logout más pequeño en móvil */
+    nav button {
+      padding: 10px 20px !important;
+      font-size: 13px !important;
+    }
+    
+    /* Ajustar select de idioma */
+    nav select {
+      min-width: 70px !important;
+      font-size: 13px !important;
+    }
+    
+    /* Ajustar nombre de usuario */
+    nav span {
+      font-size: 14px !important;
+    }
+    
+    /* Stats cards más pequeñas en móvil */
+    .stats-container {
+      grid-template-columns: 1fr !important;
+      gap: 15px !important;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    /* Tablet: navbar más compacto */
+    nav {
+      padding: 18px 25px !important;
+    }
+    
+    nav h1 {
+      font-size: 22px !important;
+    }
+  }
+`;
+if (!document.getElementById('dashboard-media-styles')) {
+  mediaStyleSheet.id = 'dashboard-media-styles';
+  document.head.appendChild(mediaStyleSheet);
+}
 
 export default Dashboard;
